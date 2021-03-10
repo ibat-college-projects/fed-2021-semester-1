@@ -21,10 +21,8 @@
         <div class="col">
             <button class='btn btn-primary' onclick='clearItems()'>Clear Items</button>
             <button class='btn btn-primary' onclick='loadItems()'>Load Items</button>
-            <select class='form-control' onchange='onSelectChange(this)'>
-                <option>Select an Item</option>
-                <option value='200'>Cork</option>
-                <option value='100'>Dublin</option>
+            <select id='myListOfCities'  class='cityListing form-control' onchange='onSelectChange(this)'>
+               
             </select>
         </div>
         <div class="col" style='margin-top: 25px'>
