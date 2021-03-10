@@ -1,6 +1,14 @@
 
 let listOfCities = ['Dublin', 'Cork', 'Limerick', 'Killarney'];
 
+//
+let listOfCitiesAsObjects = [
+    { city: 'Dublin', id: 100 },
+    { city: 'Cork', id: 200 },
+    { city: 'Limerick', id: 400 },
+    { city: 'Killarney', id: 500 }
+];
+
 function init() {
 
 
