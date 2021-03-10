@@ -1,3 +1,51 @@
+
+let listOfCities = ['Dublin','Cork','Limerick','Killarney'];
+
+function init() {
+    const selectedObject = document.querySelector('#myListOfCities');
+
+    /*
+    for(let i = 0; i < listOfCities.length; i++) {
+
+        let option = document.createElement("option");
+        option.value = i;
+        option.text = listOfCities[i];
+        selectedObject.add(option,null);
+    }
+    */
+
+    /*
+    listOfCities.forEach( function(currentItem, index) {
+        let option = document.createElement("option");
+        option.value = index;
+        option.text = currentItem;
+        selectedObject.add(option,null);
+
+    })
+    */
+
+    /*
+    for(let city of listOfCities) {
+
+        let option = document.createElement("option");
+        option.value = city;
+        option.text = city;
+        selectedObject.add(option,null);
+    }
+    */
+
+   
+    listOfCities.forEach( (city,index) => {
+        let option = document.createElement("option");
+        option.value = index;
+        option.text = city;
+        selectedObject.add(option,null);
+
+    })
+
+
+}
+
 function onSelectChange(e) {
 
     console.log(`Select List has changed`);
