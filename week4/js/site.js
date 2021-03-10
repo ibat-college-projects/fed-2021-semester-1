@@ -1,8 +1,8 @@
 
-let listOfCities = ['Dublin','Cork','Limerick','Killarney'];
+let listOfCities = ['Dublin', 'Cork', 'Limerick', 'Killarney'];
 
 function init() {
-   
+
 
     renderCityListing();
 
@@ -36,28 +36,52 @@ function init() {
     }
     */
 
-  
+
 
 
 }
 function addCity(e) {
     //carry out varous checks
     listOfCities.push(e.value);
-    e.value='';
+
+    e.value = '';
+
     renderCityListing();
 
 }
 function renderCityListing() {
+
     const selectedObject = document.querySelector('#myListOfCities');
+
     selectedObject.length = 0;
-    listOfCities.forEach( (city,index) => {
+
+    listOfCities.forEach((city, index) => {
         let option = document.createElement("option");
         option.value = index;
         option.text = city;
-        selectedObject.add(option,null);
+        selectedObject.add(option, null);
 
     })
+
+    const selectedHTMLObject = document.querySelector('#listGroup');
+
+    selectedHTMLObject.innerHTML = renderCityListingHTML();
+
 }
+
+function renderCityListingHTML() {
+
+    let html = [];
+    html.push('<ul class="list-group">')
+
+    listOfCities.forEach((city, index) => {
+        html.push(`<li class="list-group-item">${city}</li>`)
+    })
+
+    html.push('</ul>')
+    return html.join(' ');
+}
+
 
 function onSelectChange(e) {
 
@@ -73,7 +97,7 @@ function onSelectChange(e) {
         console.log(`Chosen value is ${value}`);
 
         const textValue = e.options[currentIndex].text;
-      ///  const textValue = e.options.currentText;
+        ///  const textValue = e.options.currentText;
         console.log(`Chosen text value is ${textValue}`);
 
     }
@@ -85,10 +109,10 @@ function clearItems() {
     console.log(`clearItems() is called`);
 
     // similar to document.getElementById - we use # to get by id, and a dot (.) to retrieve by class
-  //  const selectedObject = document.querySelector('#myListOfCities');
+    //  const selectedObject = document.querySelector('#myListOfCities');
     const selectedObject = document.querySelector('.cityListing');
 
-    selectedObject.options.length =0;
+    selectedObject.options.length = 0;
 
 }
 
@@ -106,9 +130,9 @@ function loadItems() {
 
     option2.value = '400';
     option2.text = 'Galway';
-  
-    selectedObject.add(option1,null);
-    selectedObject.add(option2,null);
+
+    selectedObject.add(option1, null);
+    selectedObject.add(option2, null);
 
     let countItems = selectedObject.options.length;
 
