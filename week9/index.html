@@ -17,7 +17,7 @@
 
         <div class="row">
 
-            <div class="col-md6">
+            <div class="col-md-6">
 
                 <input class="form-control" type="text" id="tbCarMF" />
                 <input class="form-control" type="text" id="tbCarModel" />
@@ -27,7 +27,31 @@
                 <button class="btn btn-primary" onclick="btnRetrieve()">Retrieve</button>
 
             </div><!-- / col-md-6-1-->
-            <div class="col-md6">
+            <div class="col-md-6">
+
+                <table id="tableData" class="table table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>MF</th>
+                            <th>Model</th>
+                            <th>Engine</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tbodyCarData">
+
+
+                    </tbody>
+
+
+                </table>
+
+
+
+
+
 
 
             </div><!-- / col-md-6-2-->
@@ -36,7 +60,7 @@
         </div><!-- /row -->
 
     </div><!-- /container-->
-    
+
 
 </body>
 
