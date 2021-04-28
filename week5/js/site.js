@@ -15,6 +15,9 @@ function initButtons() {
         })
         console.log('stuff');
     })
+
+
+
 }
 
 function renderMovieData(content) {
@@ -38,6 +41,8 @@ function renderMovieData(content) {
 
         const { title, year, director, id, cast, ...rest } = movie;
 
+        console.log(rest);
+
 
         // console.log(`${id} : ${title}: ${year} : ${director}`)
         htmlString.push(`<li>${title}`);
@@ -48,8 +53,6 @@ function renderMovieData(content) {
 
         for (const castMember of castMembers) {
             htmlString.push(`<li>${castMember}</li>`);
-
-           
         }
 
         htmlString.push(`</ul></li>`);
